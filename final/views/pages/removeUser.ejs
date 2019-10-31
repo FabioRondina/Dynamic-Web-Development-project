@@ -1,0 +1,37 @@
+<!-- views\pages\index.ejs -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <!-- central section -->
+  <section class="mid_section" >
+    <!-- buttons menu -->
+    <% include ../partials/menu %>
+
+    <!-- Multifunctional div-->
+
+
+    <div id="mainWindow">
+      <div id="removeUser">
+        <h3>Delete a User</h3>
+        <!-- onsubmit = "return validate()" usign validator.js-->
+        <form  action="/deleteUser" method="POST">
+          <input type="text" placeholder="UserEmail" name="email" required>
+          <button type="submit">Delete my data</button>
+        </form>
+      </div>
+    </div> <!-- end mainWindow div -->
+
+
+  </section> <!-- end of mid_section -->
+  <footer class="footer">
+    <% include ../partials/footer %>
+  </footer>
+</body>
+</html>

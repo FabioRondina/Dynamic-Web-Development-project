@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <!-- central section -->
+  <section class="mid_section" >
+    <!-- buttons menu -->
+    <% include ../partials/menu %>
+
+    <!-- Multifunctional div-->
+
+
+    <div id="mainWindow">
+      <div id='formContainer'>
+        <form id='form' action='/plan' method='POST'>
+
+        <h2>Start planning</h2><hr>
+        <label class='label'><b>Starting date : </b></label>
+        <input class='box' type='date' name='date'></input><br/>
+
+        <div class="dropdown-city">
+            <label class='label'><b>Location: </b></label>
+            <input class='box' id='cityText' type='text' name='location' placeholder='City' required autocomplete='off'></input>
+            <div class='dropdown-content-city'>
+                <!--  DIV FOR DROPDOWN  -->
+            </div>
+        </div><br>
+
+        <div class="dropdown-loc">
+            <label class='label'><b>Starting point: </b></label>
+            <input class='box' id='locText' type='text' name='startpoint' placeholder='Accommodation' required autocomplete="off"></input><br/>
+                <div class='dropdown-content-loc'>
+                    <!--  DIV FOR DROPDOWN -->
+                </div>
+        </div>
+
+        <label class='label'><b>Preferences: </b></label><br/>
+
+        <div class="row">
+          <div class='column'>
+            <input type='radio' name='amusementPark'> Amusement Park </input><br/>
+            <input type='radio' name='aquarium'> Aquarium </input><br/>
+            <input type='radio' name='artGallery'> Art Gallery </input><br/>
+            <input type='radio' name='church'> Church </input><br/>
+            <input type='radio' name='museum'> Museum </input><br/>
+            <hr>
+
+            <label class='label'><b>Means of transportation: </b></label><br/>
+            <input type='radio' name='publTrans'> Public Transport </input><br/>
+            <input type='radio' name='car'> Car </input><br/>
+            <input type='radio' name='foot'> On foot </input><br/>
+            <input type='radio' name='bicyle'> Bicycle </input><br/>
+
+            <button class='submit'>Submit</button>
+            <input type='reset' value='Reset'>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div> <!-- end mainWindow div -->
+
+
+</section><!-- end of mid_section -->
+<footer class="footer">
+  <% include ../partials/footer %>
+</footer>
+</body>
+</html>

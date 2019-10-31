@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link rel="stylesheet" href="css/plit.css">
+<link href='cal/fullcalendar.min.css' rel='stylesheet' />
+<link href='cal/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<script src='lib/moment.min.js'></script>
+<script src='lib/jquery.min.js'></script>
+<script src='lib/jquery-ui.min.js'></script>
+<script src='cal/fullcalendar.min.js'></script>
+
+<script src='js/plit.js'></script>
+
+
+</head>
+<body>
+  <div id='wrap'>
+
+    <div id='external-events'>
+      <h4>Draggable Events</h4>
+      <div class='fc-event'>Breakfast</div>
+      <div class='fc-event'>First POI</div>
+      <div class='fc-event'>Second POI</div>
+      <div class='fc-event'>Lunch</div>
+      <div class='fc-event'>Third POI</div>
+	  <div class='fc-event'>Happy Hour</div>
+	  <div class='fc-event'>Fourth POI</div>
+	  <div class='fc-event'>Dinner</div>
+      <p>
+        <input type='checkbox' id='drop-remove' />
+        <label for='drop-remove'>remove after drop</label>
+      </p>
+    </div>
+
+    <div id='calendar'></div>
+
+    <div style='clear:both'></div>
+
+  </div>
+</body>
+</html>

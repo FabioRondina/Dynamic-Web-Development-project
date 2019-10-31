@@ -1,0 +1,67 @@
+<!-- views\pages\aroundYou.ejs -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <!-- central section -->
+  <section class="mid_section" >
+    <!-- buttons menu -->
+    <% include ../partials/menu %>
+
+    <!-- Multifunctional div-->
+
+
+    <div id="mainWindow">
+      <div id='aroundContainer'>;
+
+        <h2> What's around you</h2>
+
+        <form id ="middle" action='/getinterest' method='POST'>
+
+
+          <% for(var i = 0; i < places.length; i++) { %>
+            <section id="aroundYou" >
+              <input type='checkbox' name="<%= places[i].p_id %>">
+              <img src="<%= places[i].icon %>" alt="POI type icon">
+              <h3> <%= places[i].name %> </h3>
+
+              <% if(places[i].distance != undefined) { %>
+                  <p>Distance: <%= places[i].distance.text %></p>
+              <% } else if(places[i].distance == undefined) { %>
+                  <p>Distance: Unknown</p>
+              <% } %>
+
+              <p>User rating: <%= places[i].rating %></p>
+
+
+              <% if(places[i].open == null) { %>
+                <p>Open: No information</p>
+                <% } else if(places[i].open.open_now) { %>
+                  <p>Open: Yes</p>
+                  <% } else { %>
+                    <p>Open: No</p>
+                    <% } %>
+                  </section>
+                  <% }; %>
+
+                  <input type='submit' value='Submit'>
+                  <input type='reset' value='Reset'>
+                </form>
+              </div>
+
+
+            </div> <!-- end mainWindow div -->
+
+
+          </section><!-- end of mid_section -->
+          <footer class="footer">
+            <% include ../partials/footer %>
+          </footer>
+        </body>
+        </html>

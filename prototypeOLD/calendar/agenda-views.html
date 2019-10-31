@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link href='cal/fullcalendar.min.css' rel='stylesheet' />
+<link href='cal/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<script src='lib/moment.min.js'></script>
+<script src='lib/jquery.min.js'></script>
+<script src='cal/fullcalendar.min.js'></script>
+<script>
+
+  $(document).ready(function() {
+
+    $('#calendar').fullCalendar({
+      header: {
+        left: '',//'today',
+        center: 'title',
+        right: 'agendaDay,listWeek'
+      },
+      defaultDate: '2019-03-08',
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'Breakfast',
+          start: '2019-03-08T08:30:00',
+          end: '2019-03-08T09:30:00'
+        },
+		{
+          title: 'First POI',
+          start: '2019-03-08T10:00:00',
+          end: '2019-03-08T11:00:00'
+        },
+		{
+          title: 'Second POI',
+          start: '2019-03-08T11:30:00',
+          end: '2019-03-08T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2019-03-08T13:00:00',
+		  end: '2019-03-08T14:00:00'
+        },
+		{
+          title: 'Third POI',
+          start: '2019-03-08T14:30:00',
+          end: '2019-03-08T16:30:00'
+        },
+
+        {
+          title: 'Happy Hour',
+          start: '2019-03-08T17:00:00',
+		  end: '2019-03-08T17:45:00'
+        },
+		{
+          title: 'Forth POI',
+          start: '2019-03-08T18:00:00',
+          end: '2019-03-08T19:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2019-03-08T20:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '2019-03-08'
+        }
+
+      ]
+    });
+
+  });
+
+</script>
+<style>
+
+  body {
+    margin: 40px 10px;
+    padding: 0;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+  }
+
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+</style>
+</head>
+<body>
+
+  <div id='calendar'></div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "maptest",
+  "version": "1.0.0",
+  "description": "server to test map queries",
+  "main": "mapserver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "laszlo",
+  "license": "ISC",
+  "dependencies": {
+    "@google/maps": "^0.5.5",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}

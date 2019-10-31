@@ -1,0 +1,53 @@
+<!-- views\pages\register.ejs -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <!-- central section -->
+  <section class="mid_section" >
+    <!-- buttons menu -->
+    <% include ../partials/menu %>
+
+    <!-- Multifunctional div-->
+
+
+    <div id="mainWindow">
+      <div id="registerForm">
+        <h1>Register here</h1>
+        <!-- onsubmit = "return validate()" usign validator.js-->
+          <form  onsubmit = "return validate()"  action="/doRegister" method="POST">
+                <label>Name</label></br>
+                <input type="text"  placeholder="first" name="first" required>
+                <input type="text"  placeholder="last"  name="last" required>
+                </br><label>Login</label>
+                </br>
+                <input type="email" placeholder="YourEmail@example.com"    name="email"required>
+                <input type="text" placeholder="UserName"     name="username" required></br>
+                <input type="password" id = "passwordReg" placeholder="Password"  name="password" required>
+                <input type="password" id = "checkPasswordReg" placeholder="re-type password" name="checkPassword" required>
+                </br><label>Details</label></br>
+                <input type="text" placeholder="gender" name="gender" required></br>
+                <input type="date" placeholder="date of birth"    name="dob" required></br>
+                <input type="text" placeholder="nationality" name="nat" required>
+                </br><label>Pictures</label></br>
+                <!-- <input type="text" placeholder="large"     name="large"> -->
+                <input type="text" placeholder="medium ( /img/yourPic.jpg)"    name="medium">
+                <input type="text" placeholder="thumbnail ( /img/yourPic.jpg)" name="thumbnail"></br>
+                <button type="submit">Register</button>
+              </form>
+        </div>
+    </div> <!-- end mainWindow div -->
+
+  </section><!-- end of mid_section -->
+
+      <footer class="footer">
+        <% include ../partials/footer %>
+      </footer>
+</body>
+</html>

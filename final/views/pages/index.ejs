@@ -1,0 +1,40 @@
+<!-- views\pages\index.ejs -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <!-- central section -->
+  <section class="mid_section" >
+    <!-- buttons menu -->
+    <% include ../partials/menu %>
+
+    <!-- Multifunctional div-->
+
+
+    <div id="mainWindow">
+      <div id="welcome">
+
+        <h2>Welcome!</h2>
+
+        <p>This is our trip assistant website to use it you need to start planning your day by picking a date,
+          selecting the city as your location and starting point which is your place of accommodation.</p>
+        <p>After you choose your preferences and the mean of transportation, the map will load along with
+          pin suggestions. You can check what's around you and finally, make a daily plan on the calendar.</p>
+        <p><i><b>- the Three Pin team</b></i></p>
+
+      </div>
+    </div> <!-- end mainWindow div -->
+
+
+  </section> <!-- end of mid_section -->
+  <footer class="footer">
+    <% include ../partials/footer %>
+  </footer>
+</body>
+</html>

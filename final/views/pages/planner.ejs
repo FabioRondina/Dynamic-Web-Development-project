@@ -1,0 +1,81 @@
+<!-- views\pages\planner.ejs -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <!-- central section -->
+  <section class="mid_section" >
+    <!-- buttons menu -->
+    <% include ../partials/menu %>
+
+    <!-- Multifunctional div-->
+
+
+    <div id="mainWindow">
+
+      <div id='calendar'></div>
+
+     <script type="text/javascript">
+     $('#calendar').fullCalendar({
+       defaultView: 'agendaDay',
+       allDaySlot: false,
+       header: {
+         left: '' ,//'prev,next today',
+         center: 'title',
+         right:  ''//'agendaDay'//'month,agendaWeek,agendaDay'
+       },
+       defaultDate: '<%= SelectedDate%>',
+       navLinks: true, // can click day/week names to navigate views
+       editable: true,
+       eventLimit: true, // allow "more" link when too many events
+       events: [
+         <% for(var i = 0; i < events.length; i++) { %>
+         {
+         <% if(events[i].name != undefined) { %>
+            title: ' <%= events[i].name %> ',
+            <% } else if(events[i].name == undefined) { %>
+                title : 'still some problem here',
+            <% } %>
+            start: '<%= SelectedDate%>T<%= hour%>:30:00', //works as far is in a string with format THH:MM:SS
+            <% var incr = parseInt(hour); %>
+            <% incr +=2 ; %>
+            <% if (incr < 24) { %>
+              <% var hour = incr.toString(); %>
+              <% if (hour.length != 2) { %>
+                  <% hour = "0" + hour; %>
+                  <%} %>
+              <%}else {%>
+                <% hour = "08"; %> //reset to first to show too many event
+              <%} %>
+
+
+            end : '<%= SelectedDate%>T<%= hour%>:30:00'
+          }
+          <% var j = i+1; %>
+          <% if (j < events.length){ %> // handle the last comma to avoid
+            ,
+          <%}%>
+          <% }; %>
+
+
+       ]//end event array
+
+     });//END CALENDAR
+
+    </script>
+
+    </div> <!-- end mainWindow div -->
+
+
+  </section><!-- end of mid_section -->
+  <footer class="footer">
+    <% include ../partials/footer %>
+  </footer>
+</body>
+</html>

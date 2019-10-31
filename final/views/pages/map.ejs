@@ -1,0 +1,42 @@
+<!-- views\pages\map.ejs -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <!-- central section -->
+  <section class="mid_section" >
+    <!-- buttons menu -->
+    <% include ../partials/menu %>
+
+    <!-- Multifunctional div-->
+
+
+    <div id="mainWindow">
+      <div id="mapPlaceholder">
+          <script>
+              // receive user details
+              lat = <%= loc[0] %>;
+              lng = <%= loc[1] %>
+              createMap(lat, lng);
+              
+              <% pois.forEach(function(poi) { %>
+                  addMarker(<%= poi.lat %>, <%= poi.lng %>);
+              <% }) %>
+          </script>
+      </div>
+    </div> <!-- end mainWindow div -->
+
+
+  </section><!-- end of mid_section -->
+
+  <footer class="footer">
+    <% include ../partials/footer %>
+  </footer>
+</body>
+</html>

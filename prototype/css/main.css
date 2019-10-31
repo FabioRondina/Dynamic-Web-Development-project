@@ -1,0 +1,112 @@
+@import 'finalPlanner.css';
+
+/* body{
+  background-color: rgba(0,255,200,0.3);
+} */
+
+.text-center{
+  text-align: center;
+}
+
+section{
+  width: 100%;
+  height: inherit;
+}
+
+menu {
+  float: left;
+  width:15%;
+  padding: 5px 15px 5px 15px;
+  display: grid;
+}
+
+/* .central_container{
+  width: auto;
+  height: auto;
+} */
+#vertical_menu{
+  width:20%;
+  float: left;
+}
+
+menuitem{
+  margin: 10px;
+  border: 1px solid #a0aab2;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #a0aab2;
+  padding: 12px; /* Add some padding */
+  float: left;
+  background-color: cornsilk;
+}
+
+
+#mainWindow{
+  width:75%;
+  height: 700px;
+  float: left;
+  background: url("../img/minimaltravel3.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-right: auto;
+}
+
+.footer{
+  width: 100%;
+  border: 10px;
+  position:fixed;
+  top:600px;
+  text-align: center;
+}
+
+
+.linksocial{
+  display:inline;
+  list-style: none;
+}
+
+.button {
+  transition: transform .2s;
+  cursor: pointer;
+  /* margin: 0 auto; */
+}
+
+.button:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2);
+}
+
+/* Smartphones (portrait and landscape) ---------- */
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+#mainWindow{
+  height: 250px;
+}
+
+}
+
+/* tablets, iPads (portrait and landscape) ---------- */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+  #mainWindow{
+    height: 400px;
+  }
+
+}
+
+/* Desktops and laptops ---------- */
+@media screen and (min-width: 1224px){
+
+  #mainWindow{
+    height: 600px;
+  }
+}
+/* Large screens ---------- */
+@media screen and (min-width: 1824px){
+
+  #mainWindow{
+    height: 800px;
+  }
+}

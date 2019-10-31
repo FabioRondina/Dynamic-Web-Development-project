@@ -1,0 +1,30 @@
+<!-- views\partials\aroundYou.ejs -->
+
+<div id='aroundContainer'>;
+
+<h2> What's around you</h2>
+  
+  <form action='/getinterest' method='POST'>
+      <input type='submit' value='Submit'>
+      <input type='reset' value='Reset'>
+      
+      <% places.forEach(function(place) { %>
+        <section>
+          <input type='checkbox' name="<%= place.p_id %>">
+          <img src="<%= place.icon %>" alt="POI type icon">
+          <h3> <%= place.name %> </h3>
+          
+            <% if(place.open == null) { %>
+              <p>Open: No information</p>
+            <% } else if(place.open.open_now) { %>
+              <p>Open: Yes</p>
+            <% } else { %>
+              <p>Open: No</p>
+            <% } %>
+            <p>User rating: <%= place.rating %></p>
+          </section>
+      <% }); %>
+      
+      
+  </form>
+</div>

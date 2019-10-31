@@ -1,0 +1,42 @@
+<!-- views\pages\loginFabio.ejs -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <!-- central section -->
+  <section class="mid_section" >
+    <!-- buttons menu -->
+    <% include ../partials/menu %>
+
+    <!-- Multifunctional div-->
+
+
+    <div id="mainWindow">
+
+      <div id = "loginForm">
+        <h1>Login</h1>
+        <!-- <form action="/login" method="POST"> -->
+        <form id="logform" action="/dologin" method="POST" >
+          <input type="text" id = email placeholder="e-mail" name="email" required>
+          <input type="password" id = password placeholder="password" name="password" required>
+          <button type="submit">Log-in</button>
+          <button class="head" id="register" href="#modal"><a href="/register"> Register </a></button>
+        </form>
+
+      </div>
+
+    </div> <!-- end mainWindow div -->
+
+
+  </section><!-- end of mid_section -->
+  <footer class="footer">
+    <% include ../partials/footer %>
+  </footer>
+</body>
+</html>

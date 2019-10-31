@@ -1,0 +1,11 @@
+table,tr{
+  border: solid;
+  text-align: left;
+}
+
+td{
+  width: 30%;
+  height: 30px;
+  background-color: light-green;
+  border-style: solid ;
+}
